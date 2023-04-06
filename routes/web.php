@@ -17,3 +17,4 @@ use App\Http\Controllers\ArticleController;
 
 Route::get('/', [ProductoController::class, 'index'])->name('home');
 
+Route::get('/articles',[ArticleController::class, 'index'])->name('articles');

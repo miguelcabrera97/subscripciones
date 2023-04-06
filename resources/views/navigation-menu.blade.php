@@ -6,6 +6,13 @@
             'url' => route('home'),
             'active' => request()->routeIs('home')
         ],
+
+        [
+            'name' => 'Articulos',
+            'url' => route('articles'),
+            'active' => request()->routeIs('articles.*')
+        ],
+
     ]
 
 @endphp
