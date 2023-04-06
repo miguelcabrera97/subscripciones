@@ -74,6 +74,10 @@
                                     {{ __('Profile') }}
                                 </x-dropdown-link>
 
+                                <x-dropdown-link href="{{ route('billing') }}">
+                                    {{ __('Metodos de Pago') }}
+                                </x-dropdown-link>
+
                                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                     <x-dropdown-link href="{{ route('api-tokens.index') }}">
                                         {{ __('API Tokens') }}
