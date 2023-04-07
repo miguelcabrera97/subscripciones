@@ -1,6 +1,6 @@
 <div>
     {{-- A good traveler has no fixed plans and is not intent upon arriving. --}}
-    <section class="bg-white rounded shadow-lg">
+    <section class="bg-white rounded shadow-lg mb-12">
         <div class="py-6 px-8">
             <h1 class="text-gray-700 mb-5 font-semibold text-lg">Agregar metodo de pago</h1>
             <div class="flex" wire:ignore>
@@ -21,6 +21,21 @@
                 </x-button>
             </div>
         </footer>
+    </section>
+
+    <section class="bg-white rounded shadow-lg">
+        <header class="px-8 py-6">
+            <h1 class="text-center text-lg">Metodos de Pago</h1>
+        </header>
+        <div class="py-6 px-8">
+            <ul>
+                @foreach ($paymentMethods as $paymentMethod)
+                    <li>
+                        {{$paymentMethod->billing_details->name}}
+                    </li>
+                @endforeach
+            </ul>
+        </div>
     </section>
 
     @push('js')
